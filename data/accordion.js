@@ -9,8 +9,11 @@ $(document).ready(function () {
   var contentPaddingHorizontal = 70; // left: 55px, right: 15px
   var panelWidthExpanded = window.innerWidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
   var contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
+  var panelHeight = window.innerHeight - panelWidthCollapsed;
 
+  $("#accordion").css('height', panelHeight);
   $('.panel-content').css('width', contentWidth);
+
 
   $("#accordion").delegate('.panel', 'click', function (e) {
     if (!$(this).is('.active')) {
@@ -34,8 +37,10 @@ $(document).ready(function () {
   function onResize() {
     panelWidthExpanded = window.innerWidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
     contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
+    panelHeight = window.innerHeight - panelWidthCollapsed;
     $(activePanel).animate({width: panelWidthExpanded}, 300);
     $('.panel-content').css('width', contentWidth);
+    $("#accordion").css('height', panelHeight);
   }
 
   var resizeTimeout = null;
