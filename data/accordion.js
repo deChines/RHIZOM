@@ -7,7 +7,7 @@ $(document).ready(function () {
   var panelWidthCollapsed = 44;
   var borderWidth = 1.5;
   var contentPaddingHorizontal = 70; // left: 55px, right: 15px
-  var panelWidthExpanded = window.innerWidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+  var panelWidthExpanded = (window.innerWidth/3*2) - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
   var contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
   var panelHeight = window.innerHeight - panelWidthCollapsed;
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
   activePanel.click();
 
   function onResize() {
-    panelWidthExpanded = window.innerWidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+    panelWidthExpanded = (window.innerWidth/3*2) - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
     contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
     panelHeight = window.innerHeight - panelWidthCollapsed;
     $(activePanel).animate({width: panelWidthExpanded}, 300);

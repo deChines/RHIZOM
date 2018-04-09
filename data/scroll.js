@@ -1,9 +1,9 @@
 $(document).ready(function(){
     function scroll() {
-        $('.scroll').css('right', "-200px");
+        $('.scroll').css('right', "-100vw");
       $('.scroll').animate({
          right: $(document).width()
-      }, 8000, scroll);
+      }, 50000, scroll);
     }
     scroll();
 });
