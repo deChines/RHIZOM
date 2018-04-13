@@ -2,22 +2,43 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  font-family: 'gt_pressura_bold';
-  color: black;
+  font-family: 'gt_pressura_regularregular';
+  color: white;
+  background-color: black;
   overflow-x: hidden;
   /*overflow: hidden;*/
 }
 
+@media screen and (max-width: 900px) {
+
+  .flies-text {
+
+    margin-right: 30px;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+
+    -webkit-column-gap: 55px;
+    -moz-column-gap: 55px;
+    column-gap: 55px;
+  }
+
+  iframe {
+    display: none;
+  }
+}
+
 .textflow{
   position: relative;
+  white-space: nowrap;
   line-height: 3;
   background-color: black;
   color:white;
-  height: 42px;
+  font-size: 14pt;
+  height: 55px;
 }
 
 #container {
-  transform:
   width: 100%;
   height: 100%;
 }
@@ -26,25 +47,26 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   width: 100%;
   height: 100%;
 }
-
-.generator{
-  transform: scale(0.5);
+.test {
+  display: inline-block;
 }
+.generator{
+  float: left;
+  }
 
 .panel {
   float: left;
   display: block;
   height: 100%;
   overflow: hidden;
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 16px;
   line-height: 1.5em;
-  width: 44px;
+  width: 55px;
 }
 
 /*.panel.active {*/
@@ -52,17 +74,36 @@ html, body {
 /*}*/
 
 .panel-content {
-  padding: 15px 15px 15px 55px;
+  background-color: black;
+  padding: 15px 15px 15px 120px;
   height: 100%;
+  margin-top: 30px;
   /*overflow-y: scroll;*/ /* this leads to the panel-content not showing until fully expanded :-( */
 }
 
+.flies-text{
+  font-size: 11pt;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-right: 50px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+  overflow: auto;
+}
+
 .panel-header {
-  width: 44px;
+  width: 55px;
   height: 100%;
   float: left;
-  background-color: white;
-  border-left: 1.5px solid #000000;
+  color: white;
+  background-color: black;
+  border-left: 1.5px solid #FFFFFF;
+  border-right: 1.5px solid #FFFFFF;
   cursor: pointer;
 }
 
@@ -70,10 +111,14 @@ html, body {
 
   transform: rotate(-90deg);
   text-align: right;
-  margin-top: 280px;
+  margin-top: 320px;
 }
-h2 {
-width:300px;
+.title {
+  font-family: 'gt_pressura_bold_italic';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 17pt;
+  width:300px;
 }
 
 .toptext {
@@ -88,13 +133,18 @@ width:300px;
 }
 
 .last .panel-header {
-  width: 44px;
+  width: 55px;
 }
 
 .scroll {
 position: relative;
 right: 100vw;
 width: 100%;
+}
+
+iframe{
+  frameborder: 0;
+  overflow: hidden;
 }
 
 /* hide scrollbar (webkit) */

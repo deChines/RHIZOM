@@ -15,7 +15,7 @@
 
 
 @font-face {
-    font-family: 'gt_pressura_boldbold_italic';
+    font-family: 'gt_pressura_bold_italic';
     src: url('fonts/gt-pressura-bold-italic-webfont.woff2') format('woff2'),
          url('fonts/gt-pressura-bold-italic-webfont.woff') format('woff');
     font-weight: normal;
@@ -39,7 +39,7 @@
 
 
 @font-face {
-    font-family: 'gt_pressura_lightlight_italic';
+    font-family: 'gt_pressura_light_italic';
     src: url('fonts/gt-pressura-light-italic-webfont.woff2') format('woff2'),
          url('fonts/gt-pressura-light-italic-webfont.woff') format('woff');
     font-weight: normal;

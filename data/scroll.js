@@ -3,7 +3,7 @@ $(document).ready(function(){
         $('.scroll').css('right', "-100vw");
       $('.scroll').animate({
          right: $(document).width()
-      }, 50000, scroll);
+      }, 100000, scroll);
     }
     scroll();
 });

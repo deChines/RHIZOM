@@ -4,12 +4,19 @@ $(document).ready(function () {
 
   var numPanels = $('.panel').length;
 
-  var panelWidthCollapsed = 44;
+  var panelWidthCollapsed = 55;
   var borderWidth = 1.5;
-  var contentPaddingHorizontal = 70; // left: 55px, right: 15px
-  var panelWidthExpanded = (window.innerWidth/3*2) - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+  var contentPaddingHorizontal = 70;
+  var windowwidth =(window.innerWidth/3*2);
+  if($('iframe').css('display') == 'none')
+  {
+  windowwidth = window.innerWidth;
+  }
+  var panelWidthExpanded = windowwidth  - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
   var contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
   var panelHeight = window.innerHeight - panelWidthCollapsed;
+
+
 
   $("#accordion").css('height', panelHeight);
   $('.panel-content').css('width', contentWidth);
@@ -35,7 +42,12 @@ $(document).ready(function () {
   activePanel.click();
 
   function onResize() {
-    panelWidthExpanded = (window.innerWidth/3*2) - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+    windowwidth =(window.innerWidth/3*2);
+    if($('iframe').css('display') == 'none')
+    {
+    windowwidth = window.innerWidth;
+    }
+    panelWidthExpanded = windowwidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
     contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
     panelHeight = window.innerHeight - panelWidthCollapsed;
     $(activePanel).animate({width: panelWidthExpanded}, 300);
