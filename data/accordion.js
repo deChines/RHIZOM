@@ -7,7 +7,7 @@ $(document).ready(function () {
   var panelWidthCollapsed = 55;
   var borderWidth = 1.5;
   var contentPaddingHorizontal = 70;
-  var windowwidth =(window.innerWidth/3*2);
+  var windowwidth =(window.innerWidth-690);
   if($('iframe').css('display') == 'none')
   {
   windowwidth = window.innerWidth;
@@ -42,7 +42,7 @@ $(document).ready(function () {
   activePanel.click();
 
   function onResize() {
-    windowwidth =(window.innerWidth/3*2);
+    windowwidth =(window.innerWidth-690);
     if($('iframe').css('display') == 'none')
     {
     windowwidth = window.innerWidth;
