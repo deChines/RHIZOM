@@ -5,7 +5,7 @@ html, body {
   font-family: 'gt_pressura_regularregular';
   color: white;
   background-color: black;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   /*overflow: hidden;*/
 }
 
@@ -27,14 +27,13 @@ html, body {
     -webkit-column-fill: auto;
     -moz-column-fill: auto;
     column-fill: auto;
-    overflow: auto;
   }
 
   iframe {
     display: none;
   }
 }
-@media screen and (max-height: 1050px) {
+@media screen and (max-height: 800px) {
 
   iframe {
     display: none;
@@ -43,7 +42,7 @@ html, body {
 
 @media screen and (min-width: 1400px) {
 
-  .flies-text{
+  .fliess-text{
     font-size: 11pt;
     letter-spacing: 0.5px;
     line-height: 1.7;
@@ -59,9 +58,17 @@ html, body {
     -webkit-column-fill: auto;
     -moz-column-fill: auto;
     column-fill: auto;
-    overflow: auto;
-  }
+    overflow-y: scroll;
 
+  }
+ .fliess-text.info{
+   overflow-y: scroll;
+
+ }
+
+ .fliess-text.artists{
+   line-height: 1;
+ }
 }
 
 .textflow{
@@ -86,8 +93,12 @@ html, body {
   width: 100vw;
   height: 100vh;
 }
-.test {
-  display: inline-block;
+p {
+  font-size: 11pt;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+
+  -webkit-column-break-after: always;
 }
 .generator{
   float: left;
@@ -111,9 +122,10 @@ html, body {
 
 .panel-content {
   background-color: black;
-  padding: 15px 15px 15px 120px;
-  margin-top: 30px;
-  /*overflow-y: scroll;*/ /* this leads to the panel-content not showing until fully expanded :-( */
+  padding: 15px 15px 15px 50px;
+  margin-top: 35px;
+  overflow-y: scroll;
+  height: calc(100vh - 105px);
 }
 
 .panel-header {
@@ -164,12 +176,14 @@ width: 100%;
 
 iframe{
   frameborder: 0;
-  overflow: hidden;
   scrolling="no";
 }
 
-a {
-  color: white;
+h6 {
+  font-family: 'gt_pressura_lightlight';
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 /* hide scrollbar (webkit) */

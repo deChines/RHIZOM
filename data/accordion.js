@@ -7,12 +7,12 @@ $(document).ready(function () {
   var panelWidthCollapsed = 55;
   var borderWidth = 1.5;
   var contentPaddingHorizontal = 70;
-  var windowwidth =(window.innerWidth-690);
+  var windowwidth =(window.innerWidth-660);
   if($('iframe').css('display') == 'none')
   {
   windowwidth = window.innerWidth;
   }
-  var panelWidthExpanded = windowwidth  - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+  var panelWidthExpanded = windowwidth  - (numPanels - 1) * (panelWidthCollapsed);
   var contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
   var panelHeight = window.innerHeight - panelWidthCollapsed;
 
@@ -42,12 +42,12 @@ $(document).ready(function () {
   activePanel.click();
 
   function onResize() {
-    windowwidth =(window.innerWidth-690);
+    windowwidth =(window.innerWidth-660);
     if($('iframe').css('display') == 'none')
     {
     windowwidth = window.innerWidth;
     }
-    panelWidthExpanded = windowwidth - (numPanels - 1) * (panelWidthCollapsed + borderWidth);
+    panelWidthExpanded = windowwidth - (numPanels - 1) * (panelWidthCollapsed);
     contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
     panelHeight = window.innerHeight - panelWidthCollapsed;
     $(activePanel).animate({width: panelWidthExpanded}, 300);
