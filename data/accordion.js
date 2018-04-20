@@ -3,18 +3,20 @@ $(document).ready(function () {
   var activePanel = $("#accordion div.panel:first");
 
   var numPanels = $('.panel').length;
-
+  var gifWidth = ($('.gif').width());
   var panelWidthCollapsed = 55;
   var borderWidth = 1.5;
   var contentPaddingHorizontal = 70;
-  var windowwidth =(window.innerWidth-660);
-  if($('iframe').css('display') == 'none')
-  {
-  windowwidth = window.innerWidth;
-  }
+  var windowwidth = (window.innerWidth - gifWidth);
+  //if($('iframe').css('display') == 'none')
+  //{
+  //windowwidth = window.innerWidth;
+  //}
   var panelWidthExpanded = windowwidth  - (numPanels - 1) * (panelWidthCollapsed);
   var contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
   var panelHeight = window.innerHeight - panelWidthCollapsed;
+
+  //typewrite
 
 
 
@@ -42,11 +44,13 @@ $(document).ready(function () {
   activePanel.click();
 
   function onResize() {
-    windowwidth =(window.innerWidth-660);
-    if($('iframe').css('display') == 'none')
-    {
-    windowwidth = window.innerWidth;
-    }
+      var gifWidth = ($('.gif').width());
+      var windowwidth = (window.innerWidth - gifWidth);
+    /*  if($('iframe').css('display') == 'none')
+      {
+        windowwidth = window.innerWidth;
+      }
+    */
     panelWidthExpanded = windowwidth - (numPanels - 1) * (panelWidthCollapsed);
     contentWidth = panelWidthExpanded - panelWidthCollapsed - borderWidth - contentPaddingHorizontal;
     panelHeight = window.innerHeight - panelWidthCollapsed;
@@ -62,4 +66,28 @@ $(document).ready(function () {
     }
     resizeTimeout = setTimeout(onResize, 300);
   }
+
+function typeWriter() {
+  var i = 0;
+  var txt = 'about';
+  var speed = 50;
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+$('#change').on('click', function() {
+    $('.fliess-text').each(function() {
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).addClass('hidden');
+        } else {
+            $(this).removeClass('hidden');
+            $(this).addClass('active');
+        }
+    });
+});
+
 });
