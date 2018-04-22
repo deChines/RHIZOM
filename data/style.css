@@ -18,6 +18,15 @@ html, body {
 
 @media  screen and (max-width: 1000px) {
 
+  .openinghours{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 20pt;
+    line-height: 1.3em;
+    white-space: nowrap;
+  }
+
     .button-change {
       position:fixed;
       top:0;
@@ -233,6 +242,13 @@ html, body {
 }
 
 @media screen and (min-width: 1000px) {
+  .openinghours{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 10pt;
+    white-space: nowrap;
+  }
 
   .button-change {
     position:fixed;
