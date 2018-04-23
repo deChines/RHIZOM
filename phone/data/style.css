@@ -1,0 +1,469 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'gt_pressura_regularregular';
+  color: white;
+  background-color: black;
+  /*overflow-x: hidden;*/
+  /*overflow: hidden;*/
+}
+@media screen and (max-width: 1000px){
+
+
+  .gifContainer {
+    display: none;
+    }
+}
+
+@media  screen and (max-width: 1000px) {
+
+  .openinghours{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 20pt;
+    line-height: 1.3em;
+    white-space: nowrap;
+  }
+
+    .button-change {
+      position:fixed;
+      top:0;
+      right:0;
+      height:80px;
+      width:150px;
+      background-color: black;
+      z-index: 1;
+    }
+
+    .button-change > p{
+      font-size: 20pt;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+
+  .flies-text{
+    letter-spacing: 0.5px;
+    margin-right: 50px;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-fill: auto;
+  }
+  .textflow{
+    position: relative;
+    white-space: nowrap;
+    line-height: 3;
+    background-color: black;
+    color:white;
+    font-size: 25pt;
+    height: 80px;
+  }
+  .fliess-text.artists{
+    line-height: 1;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  p {
+    -webkit-column-break-after: always;
+  }
+  .generator{
+    float: left;
+    }
+
+  .panel {
+    float: left;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 34px;
+    line-height: 1.3em;
+    width: 55px;
+  }
+
+  /*.panel.active {*/
+    /*width: 90%;*/
+  /*}*/
+
+  .panel-content {
+    background-color: black;
+    padding: 15px 15px 15px 50px;
+    overflow-y: scroll;
+    height: calc(100vh - 130px);
+  }
+
+  .panel-header {
+    width: 55px;
+    height: 100vh;
+    float: left;
+    color: white;
+    background-color: black;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    cursor: pointer;
+  }
+
+  .panel-header > div {
+
+    transform: rotate(-90deg);
+    text-align: right;
+    margin-top: 265px;
+  }
+  .title {
+    font-family: 'gt_pressura_bold_italic';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 30pt;
+    width:300px;
+  }
+
+  .title:hover {
+    font-family: 'gt_pressura_bold';
+  }
+
+  .toptext {
+    padding-left: 1em;
+  }
+
+  .first {
+    border: none;
+  }
+  .last {
+    border: none;
+  }
+
+  .last .panel-header {
+    width: 55px;
+  }
+
+  .scroll {
+  position: relative;
+  right: 100vw;
+  width: 100%;
+  }
+
+  iframe {
+    frameborder: 0;
+  }
+
+  h6 {
+    font-family: 'gt_pressura_lightlight';
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  a.link {
+    color: white;
+  }
+
+  a.title {
+    color: white;
+  }
+
+  a.link:hover {
+    color: white;
+    font-style: italic;
+  }
+
+  .gifContainer {
+      position: relative;
+      float: left;
+      height: calc(100vh - 55px);
+      width: auto;
+  }
+  .gif {
+  width: auto;
+  height: 100%;
+  }
+
+  .gifContainer:hover img {
+    opacity: 0.3;
+  }
+
+  .hoverBtn {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .gifText {
+    background-color: #000000;
+    color: white;
+    /*font-size: 16px;*/
+    padding: 16px 32px;
+  }
+
+  .gifContainer:hover .hoverBtn {
+    opacity: 1;
+  }
+
+  /* hide scrollbar (webkit) */
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .openinghours{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    font-size: 10pt;
+    white-space: nowrap;
+  }
+
+  .button-change {
+    position:fixed;
+    top:0;
+    right:0;
+    height:55px;
+    width:110px;
+    background-color: black;
+    z-index: 1;
+  }
+
+  .button-change > p{
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+
+  .active {
+      display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .fliess-text{
+    letter-spacing: 0.5px;
+    margin-right: 50px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+
+  }
+
+  .textflow{
+    position: relative;
+    white-space: nowrap;
+    line-height: 3;
+    background-color: black;
+    color:white;
+    font-size: 14pt;
+    height: 55px;
+  }
+  .fliess-text.artists{
+    line-height: 1;
+  }
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  p {
+    -webkit-column-break-after: always;
+  }
+  .generator{
+    float: left;
+    }
+  .inter{
+
+  }
+
+  .panel {
+    float: left;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.3em;
+    width: 55px;
+  }
+
+  /*.panel.active {*/
+    /*width: 90%;*/
+  /*}*/
+
+  .panel-content {
+    background-color: black;
+    padding: 15px 15px 15px 50px;
+    overflow-y: scroll;
+    height: calc(100vh - 105px);
+  }
+
+  .panel-header {
+    width: 55px;
+    height: 100vh;
+    float: left;
+    color: white;
+    background-color: black;
+    border-left: 1.5px solid #FFFFFF;
+    border-right: 1.5px solid #FFFFFF;
+    cursor: pointer;
+  }
+
+  .panel-header > div {
+
+    transform: rotate(-90deg);
+    text-align: right;
+    margin-top: 265px;
+  }
+  .title {
+    font-family: 'gt_pressura_bold_italic';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 17pt;
+    width:300px;
+  }
+
+  .title:hover {
+    font-family: 'gt_pressura_bold';
+  }
+
+  .toptext {
+    padding-left: 1em;
+  }
+
+  .first {
+    border: none;
+  }
+  .last {
+    border: none;
+  }
+
+  .last .panel-header {
+    width: 55px;
+  }
+
+  .scroll {
+  position: relative;
+  right: 100vw;
+  width: 100%;
+  }
+
+  iframe {
+    frameborder: 0;
+  }
+
+  h6 {
+    font-family: 'gt_pressura_lightlight';
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  a.link {
+    color: white;
+  }
+
+  a.title {
+    color: white;
+  }
+
+  a.link:hover {
+    color: white;
+    font-style: italic;
+  }
+
+  .gifContainer {
+      position: relative;
+      float: left;
+      height: calc(100vh - 55px);
+      width: auto;
+  }
+  .gif {
+  width: auto;
+  height: 100%;
+  }
+
+  .gifContainer:hover img {
+    opacity: 0.3;
+  }
+
+  .hoverBtn {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    text-align: center;
+  }
+
+  .giftext {
+    width: 400px;
+    font-size: 34px;
+    line-height: 1.3em;
+    }
+
+  .gifText > p {
+    background-color: #000000;
+    color: white;
+    padding: 16px 15px;
+  }
+
+  .gifContainer:hover .hoverBtn {
+    opacity: 1;
+  }
+
+  /* hide scrollbar (webkit) */
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
