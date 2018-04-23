@@ -1,3 +1,5 @@
+$(Document).ready(function() {
+
 var typeWriters = document.getElementsByClassName("typeWriter");
 var speed =80;
 var animating = false;
@@ -31,3 +33,4 @@ function appendChar(typeWriter, text, charPosition) {
     typeWriter.animating = false;
   }
 }
+});
