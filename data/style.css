@@ -17,9 +17,6 @@ html, body {
 }
 
 @media  screen and (max-width: 1000px) {
-  .gif-small{
-    display: block;
-  }
 
   .openinghours{
     -webkit-column-count: 3;
@@ -209,9 +206,7 @@ html, body {
 
 @media screen and (min-width: 1000px) {
 
-  .gif-small{
-    display: none; 
-  }
+
   .openinghours{
     -webkit-column-count: 3;
     -moz-column-count: 3;
